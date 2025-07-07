@@ -1,37 +1,87 @@
-const dots = document.querySelectorAll(".next-main-slider-dots>span");
-const slides = document.querySelectorAll('.hero>li');
-const interval = 2;
+let sliderPresent = 0;
+try {
+    const dots = document.querySelectorAll(".next-main-slider-dots>span");
+    const slides = document.querySelectorAll('.hero>li');
+    const interval = 2;
 
-let activeSlide = 0;
+    let activeSlide = 0;
 
-const reset = () => {
-    dots.forEach(dot => dot.removeAttribute('class'))
-    dots[activeSlide].className = 'active';
+    sliderPresent = 1;
 
-    slides.forEach(slide => slide.style.display = 'none');
-    slides[activeSlide].style.display = 'block';
-};
+    const reset = () => {
+        dots.forEach(dot => dot.removeAttribute('class'))
+        dots[activeSlide].className = 'active';
 
-reset();
+        slides.forEach(slide => slide.style.display = 'none');
+        slides[activeSlide].style.display = 'block';
+    };
 
-setInterval(() => {
     reset();
 
-    if (activeSlide < slides.length - 1) {
-        activeSlide++;
-    } else {
-        activeSlide = 0;
-    }
-}, interval * 1000);
-
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        activeSlide = index;
+    setInterval(() => {
         reset();
-    });
-});
 
-const checkpoint = 120;
+        if (activeSlide < slides.length - 1) {
+            activeSlide++;
+        } else {
+            activeSlide = 0;
+        }
+    }, interval * 1000);
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            activeSlide = index;
+            reset();
+        });
+    });
+} catch (error) {
+    console.log(error);
+}
+
+try {
+    const dots = document.querySelectorAll(".next-main-slider-dots>span");
+    const slides = document.querySelectorAll('.carousel>li');
+    const interval = 2;
+
+    let activeSlide = 0;
+
+    const reset = () => {
+        dots.forEach(dot => dot.removeAttribute('class'))
+        dots[activeSlide].className = 'active';
+
+        slides.forEach(slide => slide.style.display = 'none');
+        slides[activeSlide].style.display = 'block';
+    };
+
+    reset();
+
+    setInterval(() => {
+        reset();
+
+        if (activeSlide < slides.length - 1) {
+            activeSlide++;
+        } else {
+            activeSlide = 0;
+        }
+    }, interval * 1000);
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            activeSlide = index;
+            reset();
+        });
+    });
+} catch (error) {
+    console.log(error);
+}
+
+let checkpoint = 0;
+
+if (sliderPresent) {
+    let checkpoint = 120;
+} else {
+    let checkpoint = 15;
+}
 
 let nav_bg = 'transparent';
 let opacity = 1;

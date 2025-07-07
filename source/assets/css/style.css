@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
 *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    font-family: 'Onest', sans-serif;
 }
 
 body{
@@ -78,6 +81,12 @@ ul>li>a:hover {
     object-position: top;
 }
 
+.carousel-img {
+    position: absolute;
+    
+    object-fit: cover;
+    object-position: top;
+}
 
 .hero-picture>img:first-child{
     border-radius: 50%;
@@ -168,6 +177,10 @@ ul>li>a:hover {
     position: relative;
 }
 
+.latest-img>a {
+    height: 100px;
+}
+
 .latest-img>img {
     height: auto;
 }
@@ -185,6 +198,72 @@ ul>li>a:hover {
     cursor: zoom-in;
     transform: scale(1.4);
     z-index: 1;
+}
+
+.latest-img>a:hover{
+    cursor: zoom-in;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    flex-direction: column;
+}
+
+.contact>p{
+    font-size: 15px;
+    color: #747474;
+    margin-top: 20px;
+}
+
+.contact .form-container {
+    width: 700px;
+    height: auto;
+    padding: 26px 70px 26px 70px;
+}
+
+.contact .form-container>form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact .form-container>form>input {
+    height: 42px;
+    background-color: #404040;
+    margin-bottom: 25px;
+    color: white;
+    font-size: 15px;
+}
+
+.contact .form-container>form>textarea {
+    height: 350px;
+    background-color: #404040;
+    margin-bottom: 25px;
+    color: white;
+    font-size: 15px;
+}
+
+.contact .form-container>form>input[type=submit] {
+    background-color: #6f9ea7;
+    width: 130px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+input[type=submit]:hover {
+    transform: scale(1.15);
+}
+
+.text-centered {
+    text-align: center;
 }
 
 footer {
@@ -251,7 +330,9 @@ nav.nav-mobile {
     cursor: pointer;
 }
 
-
+.margin-10 {
+    margin: 10px;
+}
 
 
 @media (min-width: 1200px) {
