@@ -234,6 +234,16 @@ button:hover {
     position: absolute;
 }
 
+p>span>a {
+    color: #cea5fb;
+    font-weight: light;
+}
+
+p>span>a:hover {
+    text-decoration: underline;
+    font-style: italic;
+}
+
 .label-p {
     font-size: 20px;
     z-index: 1;
