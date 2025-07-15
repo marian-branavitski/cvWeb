@@ -170,6 +170,15 @@ navLinks.forEach(link => {
     }
 });
 
+const mobileNavLinks = document.querySelectorAll('.header-nav-elements-mobile>ul>li>a');
+mobileNavLinks.forEach(link => {
+    link.removeAttribute('class'); // Remove any existing class
+    if (window.location.pathname.endsWith(link.getAttribute('href'))) {
+        // If the current page matches the link's href, add the 'current' class
+        link.className = 'current';
+    }
+});
+
 
 try {
     const buttons = document.querySelectorAll('.carousel-contents>button');

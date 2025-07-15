@@ -67,6 +67,15 @@ header .header-nav ul{
     font-style: italic;
 }
 
+.header-nav-elements-mobile>ul>li>a.current {
+    background-color: #6f9ea7;
+    min-width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
 ul.middle-menu>li>a {
     padding: 0 0 0 20px;
 }
@@ -473,6 +482,32 @@ nav.nav-mobile {
     .hero-picture>p:last-child {
         font-size: 1rem;
         text-align: center;
+    }
+
+    .carousel-contents>p:first-child {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .carousel-contents>p:nth-child(2) {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .carousel-contents>p:last-child {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .carousel-contents>button:last-child {
+        width: 100%;
+        height: 50px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .next-carousel-slider-dots {
+        justify-content: center;
     }
 
     .next-main-slider-dots {
