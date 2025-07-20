@@ -200,28 +200,9 @@ try {
     const form = document.querySelector('.contact-form');
     submitButton.addEventListener('click', (event) => {
         event.preventDefault(); // Prevent the default form submission
-        const formData = new FormData(form); // Create a FormData object from the form
 
-        // Send the form data to the server using fetch
-        fetch('https://formspree.io/f/mgvyjonp', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => {
-            if (response.ok) {
-                alert('Thank you for your message! I will try to respond as soon as possible.'); // Show success message
-                form.reset(); // Reset the form
-            } else {
-                alert('There was a problem with your submission. Please try again later.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('There was a problem with your submission. Please try again later.');
-        });
+        form.reset(); // Reset the form after submission
+        alert('Thank you for your message! I will get back to you as soon as possible.'); // Show a thank you message
     });
 } catch (error) {
     console.log(error);

@@ -290,6 +290,8 @@ p>span>a:hover {
     cursor: zoom-in;
     transform: scale(1.4);
     z-index: 1;
+    color: #6f9ea7;
+    background-color: black;
 }
 
 .latest-img>a:hover{
@@ -353,6 +355,31 @@ p>span>a:hover {
     margin-top: 15px;
     margin-bottom: 20px;
     border: none;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-links>li {
+    margin: 0 30px;
+}
+
+.contact-links>li>a {
+    display: inline-block;
+}
+.contact-links>li>a>img {
+    width: 60px;
+    height: 60px;
+    transition: 250ms all;
+}
+
+.contact-links>li>a:hover>img {
+    transform: scale(1.2);
+    filter: brightness(0.8);
+    cursor: pointer;
 }
 
 .page-description {
