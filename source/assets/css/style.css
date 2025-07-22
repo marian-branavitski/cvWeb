@@ -117,7 +117,7 @@ ul>li>a:hover {
 }
 
 .hero-picture {
-    height: 75vh;
+    height: 85vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -143,7 +143,7 @@ ul>li>a:hover {
 
 .carousel-contents>p:nth-child(2) {
     font-size: 20px;
-    color: #6a6a6a;
+    color: #a1a1a1;
     font-weight: lighter;
 }
 
@@ -163,6 +163,7 @@ button {
 
 button:hover {
     transform: scale(1.3);
+    transition: 400ms all;
     cursor: pointer;
 }
 
@@ -227,18 +228,18 @@ button:hover {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 110vh;
 }
 
 .fader-bg .fader-grad-1 {
     width: 100%;
-    height: 100%;
+    height: 110vh;
     background: linear-gradient(277.92deg, rgba(0, 0, 0, 0) 7.66%, rgba(0, 0, 0, 0.88) 89.67%);
 }
 
 .fader-bg .fader-grad-0 {
     width: 100%;
-    height: 100%;
+    height: 110vh;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.01) 77.36%, rgba(0, 0, 0, 0.01) 7777.36%, #0c0b0b 96.82%);
     position: absolute;
 }
@@ -355,6 +356,7 @@ p>span>a:hover {
     margin-top: 15px;
     margin-bottom: 20px;
     border: none;
+    transition: 400ms all;
 }
 
 .contact-links {

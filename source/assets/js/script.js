@@ -34,7 +34,7 @@ try {
         });
     });
 
-    let checkpoint = 120;
+    let checkpoint = 250;
 
     let nav_bg = 'transparent';
     let opacity = 1;
@@ -195,16 +195,31 @@ try {
 }
 
 
-try {
-    const submitButton = document.querySelector('.contact-form>input[type="submit"]');
-    const form = document.querySelector('.contact-form');
-    submitButton.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent the default form submission
+window.onload = () => {
+    const form = document.getElementById('contact-form');
+    if (form) {
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent the default form submission
+            const btn = form.querySelector('input[type="submit"]');
+            btn.value = 'Sending...'; // Change the button text to indicate sending
+            btn.disabled = true; // Disable the button to prevent multiple submissions
 
-        form.reset(); // Reset the form after submission
-        alert('Thank you for your message! I will get back to you as soon as possible.'); // Show a thank you message
-    });
-} catch (error) {
-    console.log(error);
-    
+            const serviceID = 'default_service';
+            const templateID = 'template_mbzl4k9';
+
+            emailjs.sendForm(serviceID, templateID, form)
+                .then(() => {
+                    alert('Message sent successfully!');
+                    btn.value = 'Send'; // Change the button text to indicate success
+                    btn.disabled = false; // Re-enable the button
+                    form.reset(); // Reset the form fields
+                })
+                .catch((error) => {
+                    console.error('Error sending email:', error);
+                    alert('Failed to send message. Please try again later.');
+                    btn.value = 'Send'; // Reset the button text
+                    btn.disabled = false; // Re-enable the button
+                });
+        });
+    }
 }
