@@ -576,15 +576,18 @@ nav.nav-mobile {
         padding-bottom: 10px;
     }
 
-    .carousel-img {
-        width: auto;
-        height: 60%;
+    .carousel {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-auto-rows: auto;
+        gap: 15px;
+    }
+        
+    .contact .form-container {
+        width: 90%;
+        padding: 5% 2%;
     }
 
-    .carousel-contents {
-        height: 50vh;
-    }
-    
     .hero-picture {
         height: 100vh;
     }
