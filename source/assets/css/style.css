@@ -490,17 +490,34 @@ nav.nav-mobile {
         gap: 100px;
         text-align: center;
     }
+
+    .hero-picture>img:first-child {
+        width: 200px;
+        height: 200px;
+        margin-top: 10%;
+    }
 }
 
-@media (max-width: 896px) {
+@media (max-width: 920px) {
+    *:hover {
+        transition: none !important;
+        transform: none !important;
+    }
+
+    .latest-img:hover {
+        transform: none !important;
+        cursor: default;
+    }
+
     .hero-picture {
         justify-content: center;
         align-items: center;
     }
 
     .hero-picture>img:first-child {
-        width: 47%;
-        height: 50%;
+        width: auto;
+        height: 37%;
+        margin-top: 13%;
     }
 
     .hero-picture>p:nth-child(2) {
@@ -557,6 +574,19 @@ nav.nav-mobile {
     .label-p {
         text-align: center;
         padding-bottom: 10px;
+    }
+
+    .carousel-img {
+        width: auto;
+        height: 60%;
+    }
+
+    .carousel-contents {
+        height: 50vh;
+    }
+    
+    .hero-picture {
+        height: 100vh;
     }
 
 }
